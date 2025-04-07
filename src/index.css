@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme{
   --font-dm-sans: "DM Sans", sans-serif;
+}
+
+@layer components{
+  .text-preset-1{
+    @apply text-[2.5rem] leading-[100%] tracking-[-1px]
+  }
+  .text-preset-2{
+    @apply text-2xl leading-[130%] tracking-[-1px]
+  }
+  .text-preset-3{
+    @apply text-xl leading-[140%] tracking-[-0.6px]
+  }
+  .text-preset-4{
+    @apply text-base leading-[130%] tracking-[-0.6px]
+  }
+  .result-heading{
+    @apply md:text-[4rem] text-neutral-900 font-bold md:max-w-[510px] pb-2 lg:pb-[5px]
+    }
 }
